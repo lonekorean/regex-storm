@@ -1,0 +1,15 @@
+﻿/* firefox 3.0 wrapping doesn't break long words as specified, which can cause
+   horizontal scrolling, so just embrace it and force horizontal scrollbars */
+
+.haystack_backdrop_wrap_powered div
+{
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
+
+.haystack_input
+{
+	overflow-x: scroll;
+	overflow-y: scroll;
+	white-space: nowrap;
+}

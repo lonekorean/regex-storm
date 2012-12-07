@@ -1,0 +1,20 @@
+﻿.donate_box
+{
+	-moz-border-radius-topright: 20px;
+	-moz-border-radius-bottomleft: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	float: right;
+	width: 244px;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	margin-left: 20px;
+}
+
+.donate_frame
+{
+	width: 244px;
+	height: 26px;
+	margin: 10px 0px;
+}

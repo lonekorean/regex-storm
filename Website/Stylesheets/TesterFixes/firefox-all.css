@@ -1,0 +1,13 @@
+﻿/*  firefox puts scrollbars within padded area and shifts horizontally 1 pixel */
+
+.haystack_backdrop_wrap div
+{
+	margin: 7px;
+	width: 576px;
+	height: 150px;
+}
+
+.haystack_backdrop_wrap pre
+{
+	padding: 0px 1px;
+}

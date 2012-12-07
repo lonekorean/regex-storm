@@ -1,0 +1,630 @@
+﻿.form_section
+{
+	padding: 10px 0px;
+	overflow: auto;
+	clear: both;
+}
+
+.left_form_column
+{
+	float: left;
+	width: 590px;
+	padding-left: 30px;
+	overflow: auto;
+}
+
+.right_form_column
+{
+	float: left;
+	width: 286px;
+	margin: 0px 30px 0px 20px;
+	overflow: auto;
+}
+
+.label
+{
+	float: left;
+	color: #464646;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	overflow: auto;
+}
+
+.replacement_label
+{
+	padding-bottom: 2px;
+}
+
+.replacement_input_wrap
+{
+	clear: both;
+}
+
+.replacement_tip
+{
+	display: none;
+	background: url(../Images/Icons/storm.png) no-repeat;
+	float: left;
+	color: #464646;
+	padding: 0px 0px 0px 20px;
+	line-height: 140%;
+}
+
+.text_area_input
+{
+	float: left;
+	border: solid 1px #cccccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 576px;
+	padding: 6px;
+	margin: 0px;
+	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
+	font-size: 14px;
+	font-family: Courier New, Monospace;
+	line-height: 18px;
+	resize: none;
+	letter-spacing: 1px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.pattern_input
+{
+	height: 42px;
+}
+
+.replacement_input
+{
+	height: 42px;
+}
+
+.haystack_backdrop_wrap
+{
+	float: left;
+	width: 590px;
+	height: 164px;
+}
+
+/* this style is added to the haystack backdrop wrap
+   when javascript is enabled, altering this div and
+   many child elements to enable the async stuff */
+.haystack_backdrop_wrap_powered
+{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
+}
+
+.haystack_backdrop_wrap div
+{
+	display: none;
+}
+
+.haystack_backdrop_wrap_powered div
+{
+	display: block;
+	color: #f7f7f7;
+	line-height: 18px;
+	letter-spacing: 1px;
+	width: 588px;
+	height: 162px;
+	margin: 1px;
+	font-size: 14px;
+	font-family: Courier New, Monospace;
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.haystack_backdrop_wrap pre
+{
+	padding: 6px;
+}
+
+.haystack_backdrop_button
+{
+	display: none;
+}
+
+.haystack_input
+{
+	height: 150px;
+}
+
+.haystack_backdrop_wrap_powered .haystack_input
+{
+	float: none;
+	background-color: Transparent;
+	background-image: url(../Images/transparent.gif); /* fixes IE7 unclickable issue */
+	position: absolute;
+}
+
+pre
+{
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	margin: 0px;
+	padding: 0px;
+}
+
+.haystack_backdrop_wrap em
+{
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-style: normal;
+
+	/* these 2 styles fix a bug in IE8 where a wrapped span's
+	   background randomly dissappears on hover (yeah, WTF?) */
+	padding-right: .01px;
+	margin-right: -.01px;
+}
+
+.haystack_backdrop_wrap em.odd
+{
+	color: #a5d6f0;
+	background-color: #a5d6f0;
+}
+
+.haystack_backdrop_wrap em.even
+{
+	color: #c1e044;
+	background-color: #c1e044;
+}
+
+.haystack_backdrop_wrap em.hide
+{
+	visibility: hidden;
+}
+
+.replacement_toggle_block
+{
+	clear: both;
+	overflow: auto;
+}
+
+.replacement_toggle_block input
+{
+	float: left;
+	height: 17px;
+	vertical-align: middle;
+}
+
+.replacement_toggle_block label
+{
+	display: block;
+	float: left;
+	padding: 4px 0px 0px 2px;
+}
+
+.options_wrap
+{
+	clear: both;
+	overflow: auto;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: solid 1px #cccccc;
+	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
+}
+
+.check_options
+{
+	clear: both;
+	overflow: auto;
+	padding-bottom: 8px;
+	border-bottom: dotted 1px #cccccc;
+	margin-bottom: 6px;
+}
+
+.check_options_left
+{
+	float: left;
+	overflow: auto;
+	width: 152px;
+}
+
+.check_options_right
+{
+	float: left;
+	overflow: auto;
+	width: 112px;
+}
+
+.check_options_block
+{
+	clear: both;
+	overflow: auto;
+	padding-bottom: 2px;
+}
+
+.check_options_block input
+{
+	float: left;
+	height: 17px;
+	vertical-align: middle;
+}
+
+.check_options_block label
+{
+	display: block;
+	float: left;
+	padding: 4px 0px 0px 2px;
+}
+
+.numerical_options
+{
+	clear: both;
+	overflow: auto;
+}
+
+.numerical_option_block
+{
+	clear: both;
+	overflow: auto;
+	padding-top: 4px;
+	padding-left: 4px;
+}
+
+.numerical_option_block label
+{
+	display: block;
+	float: left;
+	padding-top: 3px;
+}
+
+.numerical_option_block input
+{
+	float: right;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 34px;
+	padding: 1px;
+	margin: 0px;
+	border: solid 1px #cccccc;
+	background-color: #ffffff;
+	font-size: 14px;
+	font-family: Courier New, Monospace;
+	text-align: right;
+}
+
+.val_sum
+{
+	overflow: auto;
+}
+
+.val_sum ul
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.val_sum li
+{
+	margin: 0px;
+	padding: 1px 0px 1px 20px;
+	background: url(../Images/Icons/error.png) no-repeat 0px 0px;
+}
+
+.submit_section
+{
+	float: left;
+	width: 590px;
+	text-align: right;
+	padding: 10px 30px;
+}
+
+.details_tabs
+{
+	display: none;
+	overflow: auto;
+	padding-left: 10px;
+	margin: 20px 30px 0px 30px;
+	list-style-type: none;
+	background: url(../Images/pixel-cccccc.gif) repeat-x bottom left;
+}
+
+.details_tabs li
+{
+	float: left;
+	margin-right: 4px;
+	border: solid 1px #cccccc;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	background: #eeeeee url(../Images/detail_tab_back.png) repeat-x;
+}
+
+.details_tabs li.details_tab_active
+{
+	background-image: none;
+	background-color: #f7f7f7;
+	border-bottom: solid 1px #f7f7f7;
+}
+
+.details_tabs a
+{
+	display: block;
+	font-weight: bold;
+	padding: 4px 16px 4px 38px;
+	background-repeat: no-repeat;
+	background-position: 16px 3px;
+}
+
+.details_info_link
+{
+	background: url(../Images/Icons/info.png);
+}
+
+.details_table_link
+{
+	background: url(../Images/Icons/table.png);
+}
+
+.details_context_link
+{
+	background: url(../Images/Icons/context.png);
+}
+
+.details_split_link
+{
+	background: url(../Images/Icons/list.png);
+}
+
+.details_content
+{
+	overflow: auto;
+	border: solid 1px #cccccc;
+	border-top: none;
+	padding: 10px 20px;
+	margin: 0px 30px;
+	background-color: #f7f7f7;
+	min-height: 36px;
+}
+
+.details_content_no_script
+{
+	margin-top: 20px;
+	border-top: solid 1px #cccccc;
+}
+
+.details_section
+{
+	display: none;
+	overflow: auto;
+	padding: 10px 0px;
+}
+
+/* special class to keep details info panel on */
+.details_info_section
+{
+	display: block;
+}
+
+.details_loading
+{
+	display: none;
+	width: 854px;
+	position: absolute;
+	margin-top: 2px;
+	text-align: center;
+}
+
+.non-lit,
+.split_list li span.non-lit,
+.captures ol li span.non-lit
+{
+	color: #999999;
+	font-style: italic;
+}
+
+.regex_info_blurb
+{
+	display: block;
+	background: url(../Images/Icons/info.png) no-repeat;
+	background-color: #f7f7f7; /* fixes IE ugly png fading */
+	padding: 1px 0px 1px 20px;
+}
+
+.permalink_wrap
+{
+	padding-top: 10px;
+	clear: both; /* fixes shy IE margin bug */
+}
+
+.show_permalink
+{
+	display: none;
+	background: url(../Images/Icons/permalink.png) no-repeat;
+	background-color: #f7f7f7; /* fixes IE ugly png fading */
+	padding: 1px 0px 1px 20px;
+}
+
+.permalink_length_warning
+{
+	clear: both;
+	padding-bottom: 2px;
+	font-style: italic;
+	font-size: 11px;
+}
+
+.permalink_input
+{
+	border: dotted 1px #cccccc;
+	font-size: 12px;
+	background: url(../Images/Icons/permalink.png) no-repeat 6px 6px;
+	padding: 6px 6px 6px 26px;
+	color: #666666;
+	width: 820px;
+	font-family: Courier New, Monospace;	
+	background-color: #ffffff;
+}
+
+.details_table_wrap
+{
+	float: left;
+	width: 852px;
+	border: solid 1px #cccccc;
+	overflow: auto;
+}
+
+.details_table
+{
+	width: 852px;
+	background-color: #f7f7f7;
+}
+
+.details_table_header_row
+{
+	text-align: left;
+	background-color: #999999;
+	background: url(../Images/table_header_back.gif) repeat-x;
+}
+
+.details_table tr.odd
+{
+	background-color: #ffffff;
+}
+
+.details_table tr.even
+{
+	background-color: #f2f2f2;
+}
+
+.details_table th
+{
+	padding: 6px;
+	border-left: solid 1px #cccccc;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.details_table td
+{
+	padding: 6px;
+	border-left: solid 1px #cccccc;
+	border-top: solid 1px #cccccc;
+	vertical-align: top;
+	line-height: 140%;
+}
+
+.details_table th:first-child,
+.details_table td:first-child
+{
+	border-left: none;
+}
+
+.details_table th.first_group,
+.details_table td.first_group
+{
+	border-left-width: 2px;
+}
+
+span.captures_count
+{
+	color: #999999;
+	margin-top: 2px;
+	white-space: nowrap;
+}
+
+a.captures_count
+{
+	display: block;
+	background-image: url(../Images/Icons/bullet_toggle_plus.png);
+	background-repeat: no-repeat;
+	background-position: 1px 4px;
+	padding-left: 12px;
+	margin-top: 2px;
+	white-space: nowrap;
+}
+
+.captures
+{
+}
+
+.captures ol
+{
+	margin: 0px;
+	padding: 0px 0px 0px 32px;
+}
+
+.captures ol li
+{
+	padding-top: 2px;
+	color: #999999;
+}
+
+.captures ol li span
+{
+	color: #333333;
+}
+
+.captures_remaining
+{
+	white-space: nowrap;
+	padding-top: 2px;
+	color: #999999;
+	font-style: italic;
+}
+
+.details_context
+{
+	font-size: 14px;
+	line-height: 20px;
+	font-family: Courier New;
+}
+
+.details_context_no_script
+{
+	border: solid 1px #cccccc;
+	padding: 10px;
+	background-color: #ffffff;
+}
+
+.details_context em
+{
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #a5d6f0;
+	font-style: normal;
+	padding: 0px 1px;
+	margin-right: 1px;
+}
+
+.details_context em.odd
+{
+	background-color: #a5d6f0;
+}
+
+.details_context em.even
+{
+	background-color: #c1e044;
+}
+
+.split_list
+{
+	margin: 0px;
+	padding: 6px 6px 6px 49px;
+	border: solid 1px #cccccc;
+	background-color: #ffffff;
+}
+
+.split_list li:first-child
+{
+	border-top: none;
+}
+
+.split_list li
+{
+	padding: 4px 0px;
+	color: #999999;
+	border-top: solid 1px #e2e2e2;
+}
+
+.split_list li span
+{
+	color: #333333;
+}

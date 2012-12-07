@@ -1,0 +1,549 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<link href="Stylesheets/Base.css" rel="stylesheet" type="text/css" />
+<script src="Javascripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+
+
+    <meta name="description" content="The official blog of Regex Storm. Read what's happening and what will happen." />
+
+  <title><$BlogPageTitle$></title>
+
+  <$BlogMetaData$>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Minima
+Date:     26 Feb 2004
+----------------------------------------------- */
+
+
+a img {
+  border-width:0;
+  }
+
+
+
+/* Header
+----------------------------------------------- */
+
+#blog-title {
+  margin:5px 5px 0;
+  padding:20px 20px .25em;
+  border:1px solid #eee;
+  border-width:1px 1px 0;
+  font-size:200%;
+  line-height:1.2em;
+  font-weight:normal;
+  color:#666;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  }
+#blog-title a {
+  color:#666;
+  text-decoration:none;
+  }
+#blog-title a:hover {
+  color:#c60;
+  }
+#description {
+  margin:0 5px 5px;
+  padding:0 20px 20px;
+  border:1px solid #eee;
+  border-width:0 1px 1px;
+  max-width:700px;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+/* Content
+----------------------------------------------- */
+@media all {
+  #content {
+    width:660px;
+    margin:0 auto;
+    padding:0;
+    text-align:left;
+    }
+  #main {
+    width:410px;
+    float:left;
+    }
+  #sidebar {
+    width:220px;
+    float:right;
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+/* Headings
+----------------------------------------------- */
+h2 {
+  margin:1.5em 0 .75em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+
+
+/* Posts
+----------------------------------------------- */
+@media all {
+  .date-header {
+    margin:1.5em 0 .5em;
+    }
+  .post {
+    margin:.5em 0 1.5em;
+    border-bottom:1px dotted #ccc;
+    padding-bottom:1.5em;
+    }
+  }
+@media handheld {
+  .date-header {
+    padding:0 1.5em 0 1.5em;
+    }
+  .post {
+    padding:0 1.5em 0 1.5em;
+    }
+  }
+.post-title {
+  margin:.25em 0 0;
+  padding:0 0 4px;
+  font-size:140%;
+  font-weight:normal;
+  line-height:1.4em;
+  color:#c60;
+  }
+.post-title a, .post-title a:visited, .post-title strong {
+  display:block;
+  text-decoration:none;
+  color:#c60;
+  font-weight:normal;
+  }
+.post-title strong, .post-title a:hover {
+  color:#333;
+  }
+.post div {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+p.post-footer {
+  margin:-.25em 0 0;
+  color:#ccc;
+  }
+.post-footer em, .comment-link {
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#999;
+  margin-right:.6em;
+  }
+.comment-link {
+  margin-left:.6em;
+  }
+.post img {
+  padding:4px;
+  border:1px solid #ddd;
+  }
+.post blockquote {
+  margin:1em 20px;
+  }
+.post blockquote p {
+  margin:.75em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+  margin:1em 0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#999;
+  }
+#comments h4 strong {
+  font-size:130%;
+  }
+#comments-block {
+  margin:1em 0 1.5em;
+  line-height:1.6em;
+  }
+#comments-block dt {
+  margin:.5em 0;
+  }
+#comments-block dd {
+  margin:.25em 0 0;
+  }
+#comments-block dd.comment-timestamp {
+  margin:-.25em 0 2em;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+#comments-block dd p {
+  margin:0 0 .75em;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+.paging-control-container {
+  float: right;
+  margin: 0px 6px 0px 0px;
+  font-size: 80%;
+}
+.unneeded-paging-control {
+  visibility: hidden;
+}
+
+/* Sidebar Content
+----------------------------------------------- */
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 15px;
+  text-indent:-15px;
+  line-height:1.5em;
+  }
+#sidebar p {
+  color:#666;
+  line-height:1.5em;
+  }
+
+
+/* Profile
+----------------------------------------------- */
+#profile-container {
+  margin:0 0 1.5em;
+  border-bottom:1px dotted #ccc;
+  padding-bottom:1.5em;
+  }
+.profile-datablock {
+  margin:.5em 0 .5em;
+  }
+.profile-img {
+  display:inline;
+  }
+.profile-img img {
+  float:left;
+  padding:4px;
+  border:1px solid #ddd;
+  margin:0 8px 3px 0;
+  }
+.profile-data {
+  margin:0;
+  font:bold 78%/1.6em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+.profile-data strong {
+  display:none;
+  }
+.profile-textblock {
+  margin:0 0 .5em;
+  }
+.profile-link {
+  margin:0;
+  font:78%/1.4em "Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  }
+
+
+/* Feeds
+----------------------------------------------- */
+#blogfeeds {
+  }
+#postfeeds {
+  }
+  </style>
+
+</head>
+
+    <body>
+        <div class="body_container">
+            <div class="nav_back">
+                <div class="nav_wrap">
+                    <ul>
+                        <li><a id="M_hlNavHome" href="./">Home </a></li>
+                        <li><a id="M_hlNavTester" href="Tester.aspx">Tester</a></li>
+
+                        <li><a id="M_hlNavReference" href="Reference.aspx">Reference</a></li>
+                        <li><a id="M_hlNavAbout" href="About.aspx">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_back">
+                <div class="header_back">
+                    <div class="header_content">
+
+                        <a class="header_logo" href="./"><img src="Images/regex_storm.png" alt="Regex Storm" style="border-width:0px;" /></a>
+                    </div>
+                    <div class="sheet_wrap">
+                        <div class="sheet_top"></div>
+                        <div class="sheet_mid">
+                            <div class="sheet_content">
+                                    
+
+    <img class="title" src="Images/Titles/about.png" alt="About" style="border-width:0px;" />
+
+
+
+<!-- Begin #content -->
+<div id="content">
+
+
+<!-- Begin #main -->
+<div id="main"><div id="main2">
+
+<Blogger>
+
+    <BlogDateHeader>
+  <h2 class="date-header"><$BlogDateHeaderDate$></h2>
+  </BlogDateHeader>
+
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="<$BlogItemNumber$>"></a>
+         <BlogItemTitle>
+    <h3 class="post-title">
+	 <BlogItemUrl><a href="<$BlogItemUrl$>" title="external link"></BlogItemUrl>
+	 <$BlogItemTitle$>
+	 <BlogItemUrl></a></BlogItemUrl>
+    </h3>
+    </BlogItemTitle>
+
+	         <div class="post-body">
+	<div>
+      <$BlogItemBody$>
+    </div>
+    </div>
+    
+    <p class="post-footer">
+      <em><$I18NPostedByAuthorNickname$> <$I18NAtTimeWithPermalink$></em>
+      <MainOrArchivePage><BlogItemCommentsEnabled>
+
+         <a class="comment-link" href="<$BlogItemCommentCreate$>"<$BlogItemCommentFormOnclick$>><span style="text-transform:lowercase"><$I18NNumComments$></span></a>
+
+      </BlogItemCommentsEnabled><BlogItemBacklinksEnabled>
+<a class="comment-link" href="<$BlogItemPermalinkUrl$>#links"><span style="text-transform:lowercase"><$I18NLinksToThisPost$></span></a>
+</BlogItemBacklinksEnabled>
+</MainOrArchivePage>  <$BlogItemControl$>
+    </p>
+  
+  </div>
+  <!-- End .post -->
+  
+  
+  
+  <!-- Begin #comments -->
+ <ItemPage>
+  <div id="comments">
+
+	<BlogItemCommentsEnabled><a name="comments"></a>
+    <h4><$I18NNumComments$>:</h4>
+    <dl id="comments-block">
+      <$CommentPager$>
+      <BlogItemComments>
+        <dt class="comment-poster" id="<$BlogCommentAnchorName$>"><a name="<$BlogCommentAnchorName$>"></a>
+          <$I18NCommentAuthorSaid$>
+        </dt>
+        <dd class="comment-body">
+          <p><$BlogCommentBody$></p>
+        </dd>
+        <dd class="comment-timestamp"><a href="<$BlogCommentPermalinkURL$>" title="comment permalink"><$BlogCommentDateTime$></a>
+          <$BlogCommentDeleteIcon$>
+        </dd>
+      </BlogItemComments>
+      <$CommentPager$>
+    </dl>
+		<p class="comment-timestamp">
+      <$BlogItemCreate$>
+    </p>
+    <p id="postfeeds"><$BlogItemFeedLinks$></p>
+  </BlogItemCommentsEnabled>
+    <BlogItemBacklinksEnabled>
+    <a name="links"></a><h4><$I18NLinksToThisPost$>:</h4>
+    <dl id="comments-block">
+    <BlogItemBacklinks>
+        <dt class="comment-title">
+        <$BlogBacklinkControl$>
+        <a href="<$BlogBacklinkURL$>" rel="nofollow"><$BlogBacklinkTitle$></a> <$BlogBacklinkDeleteIcon$>
+        </dt>
+        <dd class="comment-body"><$BlogBacklinkSnippet$>
+        <br />
+        <span class="comment-poster">
+        <em><$I18NPostedByBacklinkAuthor$> @ <$BlogBacklinkDateTime$></em>
+        </span>
+        </dd>
+    </BlogItemBacklinks>
+    </dl>
+    <p class="comment-timestamp"><$BlogItemBacklinkCreate$></p>
+    </BlogItemBacklinksEnabled>
+
+
+		<p class="comment-timestamp">
+	<a href="<$BlogURL$>">&lt;&lt; <$I18NHome$></a>
+    </p>
+    </div>
+
+</ItemPage>
+
+  <!-- End #comments -->
+
+</Blogger>
+</div></div>
+<!-- End #main -->
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+<div id="sidebar"><div id="sidebar2">
+  
+  
+  <!-- Begin #profile-container -->
+
+   <$BlogMemberProfile$>
+   
+  <!-- End #profile -->
+    
+        <MainOrArchivePage>
+  <h2 class="sidebar-title"><$I18NLinks$></h2>
+    <ul>
+    	<li><a href="http://news.google.com/">Google News</a></li>
+    	<li><a href="http://help.blogger.com/bin/answer.py?answer=41427">Edit-Me</a></li>
+    	<li><a href="http://help.blogger.com/bin/answer.py?answer=41427">Edit-Me</a></li>
+  </ul>
+  </MainOrArchivePage>
+
+  
+  <h2 class="sidebar-title"><$I18NPreviousPosts$></h2>
+    <ul id="recently">
+    <BloggerPreviousItems>
+        <li><a href="<$BlogItemPermalinkURL$>"><$BlogPreviousItemTitle$></a></li>
+     </BloggerPreviousItems>
+  </ul>
+    <MainOrArchivePage>
+
+  <h2 class="sidebar-title"><$I18NArchives$></h2>
+    <ul class="archive-list">
+   	  <BloggerArchives>
+    	<li><a href="<$BlogArchiveURL$>"><$BlogArchiveName$></a></li>
+	  </BloggerArchives>
+
+  </ul>
+  </MainOrArchivePage>
+
+      <p id="powered-by"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" /></a></p>
+      <p id="blogfeeds"><$BlogFeedsVertical$></p>
+  
+  <!--
+  <p>This is a paragraph of text that could go in the sidebar.</p>
+  -->
+  
+
+
+</div></div>
+<!-- End #sidebar -->
+
+
+</div>
+<!-- End #content -->
+
+<div class="clear"></div>
+
+                            </div>
+                        </div>
+                        <div class="sheet_bottom"></div>
+                    </div>
+                </div>
+                <div class="push_footer"></div>
+            </div>
+
+        </div>
+        <div class="footer_back">
+            <div class="footer_content">
+                <div class="footer_block">
+                    <div class="footer_block_title">Info</div>
+                    <div class="footer_block_body">
+                        <img class="footer_block_image" src="Images/Icons/Large/info.png" alt="Info" style="border-width:0px;" />
+                        <strong>Regex Storm</strong> &copy; 2010<br />
+
+                        Created by Will Boyd
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="footer_block_title">Contact</div>
+                    <div class="footer_block_body">
+                        <img class="footer_block_image" src="Images/Icons/Large/contact.png" alt="Contact" style="border-width:0px;" />
+                        Comments or suggestions?<br />
+
+                        <img src="Images/email_address.png" alt="Will's email address" style="border-width:0px;" />
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="footer_block_title">Pages</div>
+                    <div class="footer_block_body">
+                        <img class="footer_block_image footer_block_image_links" src="Images/Icons/Large/pages.png" alt="Pages" style="border-width:0px;" />
+                        <div class="footer_nav_links">
+
+                            <a id="M_hlFooterHome" href="./">Home</a>
+                            <a id="M_hlFooterTester" href="Tester.aspx">Tester</a>
+                            <a id="M_hlFooterReference" href="Reference.aspx">Reference</a>
+                            <a id="M_hlFooterAbout" href="About.aspx">About</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+            <!-- google analytics -->
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+            try {
+            var pageTracker = _gat._getTracker("UA-12252325-1");
+            pageTracker._trackPageview();
+            } catch(err) {}</script>
+        
+    </body>
+</html>

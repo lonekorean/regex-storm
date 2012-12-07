@@ -1,0 +1,6 @@
+﻿/* fixes safari 3 pixel textarea shift */
+
+.haystack_backdrop_wrap pre
+{
+	padding: 6px 9px;
+}

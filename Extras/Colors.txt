@@ -1,0 +1,18 @@
+007ebd	main blue	header color bottom
+5cb4f7	lighter blue	header color top
+e0ecf1	lightest blue	highlighted matches in context
+5c8f4d	green		buttons top
+
+a5d6f0	light blue	odd
+c1e044	light green	even (and active nav)
+
+f7f7f7			input background
+f2f2f2			alt row background
+e2e2e2			page background
+cccccc			default borders
+999999			table header row
+666666			main panel border
+464646			footer pages link highlight
+3f3f3f			footer background
+333333			default text
+2e2e2e			nav bar background

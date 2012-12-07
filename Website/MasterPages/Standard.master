@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Standard.master.cs" Inherits="MasterPages.Standard" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title></title>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <base id="hgcBase" runat="server" />
+        <asp:ContentPlaceHolder id="H" runat="server" />
+
+        <asp:PlaceHolder ID="phGoogleAnalytics" runat="server">
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-12252325-1']);
+                _gaq.push(['_trackPageview']);
+
+                (function () {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        </asp:PlaceHolder>
+    </head>
+
+    <body>
+        <div class="body_container">
+            <div class="nav_back">
+                <div class="nav_wrap">
+                    <ul>
+                        <li><asp:HyperLink ID="hlNavHome" runat="server" NavigateUrl="~/">Home </asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hlNavTester" runat="server" NavigateUrl="~/tester">Tester</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hlNavReference" runat="server" NavigateUrl="~/reference">Reference</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="hlNavAbout" runat="server" NavigateUrl="~/about">About</asp:HyperLink></li>
+                        <li><a href="http://regexstorm.blogspot.com/" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_back">
+                <div class="header_back">
+                    <div class="header_content">
+                        <asp:HyperLink runat="server" ImageUrl="~/Images/regex_storm.png" NavigateUrl="~/" CssClass="header_logo">Regex Storm .NET</asp:HyperLink>
+                    </div>
+                    <div class="sheet_wrap">
+                        <div class="sheet_top"></div>
+                        <div class="sheet_mid">
+                            <div class="sheet_content">
+                                <form id="theForm" runat="server">
+                                    <asp:ScriptManager ID="ElScriptoHombre" runat="server" />
+                                    <asp:ContentPlaceHolder id="M" runat="server" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="sheet_bottom"></div>
+                    </div>
+                </div>
+                <div class="push_footer"></div>
+            </div>
+        </div>
+        <div class="footer_back">
+            <div class="footer_content">
+                <div class="footer_block">
+                    <div class="footer_block_title">Info</div>
+                    <div class="footer_block_body">
+                        <asp:Image runat="server" ImageUrl="~/Images/Icons/Large/info.png" AlternateText="Info" CssClass="footer_block_image" />
+                        <strong>Regex Storm</strong> &copy; 2010 - 2011 Will Boyd<br />
+                        Part of the <a class="footer_coders_block_link" href="http://codersblock.com/" target="_blank">Coder's Block</a> portfolio
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="footer_block_title">Contact</div>
+                    <div class="footer_block_body">
+                        <asp:Image runat="server" ImageUrl="~/Images/Icons/Large/contact.png" AlternateText="Contact" CssClass="footer_block_image" />
+                        Comments or suggestions?<br />
+                        <strong><span>will</span><span>@</span><span>coders</span><span class="spam-trick">-spam-misdirect-</span><span>block</span><span>.</span><span>com</span></strong>
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="footer_block_title">Pages</div>
+                    <div class="footer_block_body">
+                        <asp:Image runat="server" ImageUrl="~/Images/Icons/Large/pages.png" AlternateText="Pages" CssClass="footer_block_image footer_block_image_links" />
+                        <div class="footer_nav_links">
+                            <asp:HyperLink ID="hlFooterHome" runat="server" NavigateUrl="~/">Home</asp:HyperLink>
+                            <asp:HyperLink ID="hlFooterTester" runat="server" NavigateUrl="~/tester">Tester</asp:HyperLink>
+                            <asp:HyperLink ID="hlFooterReference" runat="server" NavigateUrl="~/reference">Reference</asp:HyperLink>
+                            <asp:HyperLink ID="hlFooterAbout" runat="server" NavigateUrl="~/about">About</asp:HyperLink>
+                            <a href="http://regexstorm.blogspot.com/" target="_blank">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

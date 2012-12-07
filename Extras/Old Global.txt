@@ -1,0 +1,156 @@
+﻿<%@ Application Language="C#" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+
+<script runat="server">
+
+    void Application_BeginRequest(object sender, EventArgs e) 
+    {
+        Uri currentUrl = null;
+        //if (Request.Url.AbsolutePath == "/NotFound.aspx" && Request.Url.Query.StartsWith("?404;"))
+        //{
+        //    // this is a 404 call in prod (example, http://regexstorm.net/NotFound.aspx?404;http://regexstorm.net:80/tester?this=that)
+        //    // extract the original url from the query string, remove the port, and use it as the current url
+        //    string url = Request.Url.Query.Substring(5);
+        //    url = url.Remove(url.IndexOf(":80"), 3);
+        //    currentUrl = new Uri(url);
+        //}
+        //else
+        //{
+            // just a normal page request, use the true current url
+            currentUrl = Request.Url;
+        //}
+
+        //ConsolidateVariants(currentUrl);
+        //RedirectUrl(currentUrl);
+        //RewriteUrl(currentUrl);
+    }
+
+    private void ConsolidateVariants(Uri currentUrl)
+    {
+        // start with current url
+        UriBuilder redirectUrl = new UriBuilder(currentUrl);
+
+        // variant host strings (example, www.regexstorm.com) are consolidated to regexstorm.net
+        if (currentUrl.DnsSafeHost != "regexstorm.net" && currentUrl.DnsSafeHost != "localhost")
+        {
+            // modify host
+            redirectUrl.Host = "regexstorm.net";
+            
+            // if the path contains default.aspx, remove it before redirecting
+            redirectUrl.Path = Regex.Replace(redirectUrl.Path, "/default.aspx$", "/");
+        }
+
+        // remove trailing / for directories (example, http://regexstorm.net/tester/)
+        if (currentUrl.AbsolutePath.EndsWith("/"))
+        {
+            redirectUrl.Path = redirectUrl.Path.TrimEnd('/');
+        }
+        
+        // if anything on the redirect url was changed, then a redirect is due
+        if (redirectUrl.Uri.ToString() != currentUrl.ToString())
+        {
+            // permanently redirect to new url
+            Response.AddHeader("Location", redirectUrl.Uri.ToString());
+            Response.StatusCode = 301;
+            Response.End();
+        }
+
+    }
+
+    private void RedirectUrl(Uri currentUrl)
+    {
+        // there's an extra app directory in dev, which affects path logic
+        bool isDev = (currentUrl.DnsSafeHost == "localhost");
+        
+        // determine app relative path
+        string appRelativePath = currentUrl.AbsolutePath.ToLower();
+        if (isDev)
+        {
+            // remove app directory
+            appRelativePath = Regex.Replace(appRelativePath, "^" + Request.ApplicationPath, "", RegexOptions.IgnoreCase);
+        }
+        
+        // run through all cases where we want to redirect
+        UriBuilder redirectUrl = new UriBuilder(currentUrl);
+        switch (appRelativePath)
+        {
+            case "/tester.aspx":
+                redirectUrl.Path = "/tester";
+                break;
+            case "/reference.aspx":
+                redirectUrl.Path = "/reference";
+                break;
+            case "/about.aspx":
+                redirectUrl.Path = "/about";
+                break;
+        }
+
+        // if anything on the redirect url was changed, then a redirect is due
+        if (redirectUrl.Uri.ToString() != currentUrl.ToString())
+        {
+            if (isDev)
+            {
+                // put the app directory back in when in dev
+                redirectUrl.Path = Request.ApplicationPath + redirectUrl.Path;
+            }
+
+            // permanently redirect to new url
+            Response.AddHeader("Location", redirectUrl.ToString());
+            Response.StatusCode = 301;
+            Response.End();
+        }
+    }
+
+    private void RewriteUrl(Uri currentUrl)
+    {
+        // only rewrite a url if it's to a folder (no file extension)
+        if(!currentUrl.AbsolutePath.Contains(".")){
+            // get path segments array and toss the first segment (the root /)
+            List<string> segments = new List<string>(currentUrl.Segments);
+            segments.RemoveAt(0);
+            
+            // in dev, the next segment is the app (Website) directory, which we can also toss
+            if (currentUrl.DnsSafeHost == "localhost")
+            {
+                segments.RemoveAt(0);
+            }
+
+            // only continue if there are segments left (directory default urls will end here)
+            if (segments.Count > 0)
+            {
+                // do some massaging on each segment (remove trailing / and make lowercase)
+                for (int i = 0; i < segments.Count; i++)
+                {
+                    segments[i] = segments[i].TrimEnd('/').ToLower();
+                }
+
+                // alright, now we're ready for actual rewriting logic
+                string rewrittenPath = null;
+
+                if (segments.Count == 1)
+                {
+                    // single directory rewrites
+                    switch (segments[0])
+                    {
+                        case "tester":
+                            rewrittenPath = "~/Tester.aspx";
+                            break;
+                        case "reference":
+                            rewrittenPath = "~/Reference.aspx";
+                            break;
+                        case "about":
+                            rewrittenPath = "~/About.aspx";
+                            break;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(rewrittenPath))
+                {
+                    // execute rewrite, passing current query string along
+                    HttpContext.Current.RewritePath(rewrittenPath, "", currentUrl.Query.TrimStart('?'), true);
+                }
+            }
+        }
+    }
+       
+</script>

@@ -1,0 +1,6 @@
+﻿/* fixes horizontal scrollbar causing vertical scrollbar */
+
+.details_table_wrap
+{
+	overflow-x: scroll;
+}

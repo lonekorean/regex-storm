@@ -1,0 +1,23 @@
+Edit Module Mapping
+Request path: *
+Module: StaticFileModule,DefaultDocumentModule,DirectoryListingModule
+Executable: (empty)
+Name: StaticFile
+
+File or Folder
+
+
+
+
+
+
+
+%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
+
+
+File path for 404 error:
+%SystemDrive%\inetpub\custerr
+\<LANGUAGE-TAG>\
+404.htm
+
+(checkbox clicked)
