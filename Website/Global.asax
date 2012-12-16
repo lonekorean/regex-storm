@@ -1,7 +1,25 @@
 ﻿<%@ Application Language="C#" %>
 <%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Import Namespace="System.Web.Routing" %>
 
 <script runat="server">
+
+    void Application_Start(object sender, EventArgs e)
+    {
+        RegisterRoutes(RouteTable.Routes);
+    }
+
+    public static void RegisterRoutes(RouteCollection routes)
+    {
+        routes.Add("Test", new Route
+        (
+           "tester",
+           new CustomRouteHandler("~/Tester.aspx")
+        ));
+    }
+    
+    
+    
 
     void Application_BeginRequest(object sender, EventArgs e) 
     {
