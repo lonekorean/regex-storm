@@ -8,18 +8,16 @@ using System.Web.UI;
 
 public class CustomRouteHandler : IRouteHandler
 {
+    public string VirtualPath { get; private set; }
+
     public CustomRouteHandler(string virtualPath)
     {
         this.VirtualPath = virtualPath;
     }
 
-    public string VirtualPath { get; private set; }
-
-    public IHttpHandler GetHttpHandler(RequestContext
-          requestContext)
+    public IHttpHandler GetHttpHandler(RequestContext requestContext)
     {
-        var page = BuildManager.CreateInstanceFromVirtualPath
-             (VirtualPath, typeof(Page)) as IHttpHandler;
+        var page = BuildManager.CreateInstanceFromVirtualPath(VirtualPath, typeof(Page)) as IHttpHandler;
         return page;
     }
 }

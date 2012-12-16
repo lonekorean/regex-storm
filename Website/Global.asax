@@ -9,21 +9,16 @@
         RegisterRoutes(RouteTable.Routes);
     }
 
-    public static void RegisterRoutes(RouteCollection routes)
-    {
-        routes.Add("Test", new Route
-        (
-           "tester",
-           new CustomRouteHandler("~/Tester.aspx")
-        ));
-    }
-    
-    
-    
-
-    void Application_BeginRequest(object sender, EventArgs e) 
+    void Application_BeginRequest(object sender, EventArgs e)
     {
         CleanUpDomain();
+    }
+    
+    public static void RegisterRoutes(RouteCollection routes)
+    {
+        routes.Add(new Route("tester", new CustomRouteHandler("~/Tester.aspx")));
+        routes.Add(new Route("reference", new CustomRouteHandler("~/Reference.aspx")));
+        routes.Add(new Route("about", new CustomRouteHandler("~/About.aspx")));
     }
 
     private void CleanUpDomain()

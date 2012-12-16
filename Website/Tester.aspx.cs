@@ -745,7 +745,7 @@ public partial class Tester : PageBase
         }
 
         // create a new url with current scheme and host
-        UriBuilder url = new UriBuilder(Request.Url.Scheme, Request.Url.Host);
+        UriBuilder url = new UriBuilder(Request.Url.Scheme, Request.Url.Host, Request.Url.Port);
 
         // set raw path
         url.Path = this.RawPath;
