@@ -65,7 +65,7 @@
                     <div class="footer_block_title">Info</div>
                     <div class="footer_block_body">
                         <asp:Image runat="server" ImageUrl="~/Images/Icons/Large/info.png" AlternateText="Info" CssClass="footer_block_image" />
-                        <strong>Regex Storm</strong> &copy; 2010 - 2011 Will Boyd<br />
+                        <strong>Regex Storm</strong> &copy; 2010 - <asp:Literal ID="litYear" runat="server" /> Will Boyd<br />
                         Part of the <a class="footer_coders_block_link" href="http://codersblock.com/" target="_blank">Coder's Block</a> portfolio
                     </div>
                 </div>

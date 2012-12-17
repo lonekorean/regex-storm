@@ -14,15 +14,15 @@
             <div class="updates_title">What's New?</div>
             <ul>
                 <li>
-                    <div class="update_item_title">August 14, 2010</div>
+                    <div class="update_item_title">December 17, 2012</div>
                     <div class="update_item_blurb">
-                        Made some minor updates around the site to keep everything running smoothly.
+                        Switched hosts, upgraded to .NET 4.0, and cleaned up some code.
                     </div>
                 </li>
                 <li>
-                    <div class="update_item_title">January 27, 2010</div>
+                    <div class="update_item_title">August 14, 2010</div>
                     <div class="update_item_blurb">
-                        Big upgrades to the <a href="http://regexstorm.net/tester">Regex Tester</a>, including real-time highlighting.
+                        Made some minor updates around the site to keep everything running smoothly.
                     </div>
                 </li>
             </ul>

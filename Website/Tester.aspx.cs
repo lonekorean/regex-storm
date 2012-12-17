@@ -190,9 +190,9 @@ public partial class Tester : PageBase
         if (!ScriptManager.GetCurrent(this).IsInAsyncPostBack)
         {
             // fix issue where the leading line break is eaten in multiline textboxes
-            txtPattern.Text = Environment.NewLine + txtPattern.Text;
-            txtReplacement.Text = Environment.NewLine + txtReplacement.Text;
-            txtHaystack.Text = Environment.NewLine + txtHaystack.Text;
+            txtPattern.Text = txtPattern.Text;
+            txtReplacement.Text = txtReplacement.Text;
+            txtHaystack.Text = txtHaystack.Text;
         }
 
         if (this.IsDevEnvironment)

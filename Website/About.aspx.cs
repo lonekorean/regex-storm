@@ -33,12 +33,10 @@ public partial class About : PageBase
     {
         // add head stuff
         Title = "Site Info and Credits - Regex Storm";
-        AddStylesheet("~/Stylesheets/About.css");
     }
 
     protected void About_Load(object sender, EventArgs e)
     {
-        hgcDonateFrame.Attributes["src"] = this.ResolveClientUrl("~/DonateFrame.htm");
     }
 
     #endregion

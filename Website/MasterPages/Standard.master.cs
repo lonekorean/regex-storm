@@ -64,6 +64,9 @@ namespace MasterPages
 
                 // only add google analytics if exclude stats session flag is not set to false
                 phGoogleAnalytics.Visible = (Session["excludestats"] == null || !Convert.ToBoolean(Session["excludestats"]));
+
+                // copyright date
+                litYear.Text = DateTime.Now.Year.ToString();
             }
         }
 

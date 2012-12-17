@@ -11,24 +11,6 @@
     <asp:Image runat="server" ImageUrl="~/Images/Titles/about.png" AlternateText="About" CssClass="title" />
 
     <div class="section_text">
-        <div class="donate_box">
-            <p>
-                <strong>Has Regex Storm helped you?</strong>
-            </p>
-            <iframe id="hgcDonateFrame" runat="server" scrolling="no" frameborder="0" class="donate_frame"></iframe>
-<%--
-            <p>
-                Your donations help me buy beer and video games. Also, I have pet rabbits and need to buy hay for them to eat.
-            </p>
-            <p>
-                <asp:Image runat="server" ImageUrl="~/Images/rabbits.jpg" AlternateText="Rabbits like hay" />
-            </p>
-            <p>
-                Please, think of the rabbits.
-            </p>
---%>
-        </div>
-    
         <p>
             <strong>What is Regex Storm?</strong>
         </p>
