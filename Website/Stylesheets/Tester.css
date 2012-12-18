@@ -55,8 +55,7 @@
 {
 	float: left;
 	border: solid 1px #cccccc;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	width: 576px;
 	padding: 6px;
 	margin: 0px;
@@ -92,8 +91,7 @@
    many child elements to enable the async stuff */
 .haystack_backdrop_wrap_powered
 {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
 }
 
@@ -151,8 +149,7 @@ pre
 
 .haystack_backdrop_wrap em
 {
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	font-style: normal;
 
 	/* these 2 styles fix a bug in IE8 where a wrapped span's
@@ -203,8 +200,7 @@ pre
 	clear: both;
 	overflow: auto;
 	padding: 10px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	border: solid 1px #cccccc;
 	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
 }
@@ -277,8 +273,7 @@ pre
 .numerical_option_block input
 {
 	float: right;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	width: 34px;
 	padding: 1px;
 	margin: 0px;
@@ -331,10 +326,8 @@ pre
 	float: left;
 	margin-right: 4px;
 	border: solid 1px #cccccc;
-	-moz-border-radius-topleft: 8px;
-	-moz-border-radius-topright: 8px;
-	-webkit-border-top-left-radius: 8px;
-	-webkit-border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 	background: #eeeeee url(../Images/detail_tab_back.png) repeat-x;
 }
 
@@ -586,8 +579,7 @@ a.captures_count
 
 .details_context em
 {
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	border-radius: 3px;
 	background-color: #a5d6f0;
 	font-style: normal;
 	padding: 0px 1px;
