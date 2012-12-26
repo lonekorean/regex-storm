@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="false" CodeFile="Reference.aspx.cs" Inherits="Reference" ValidateRequest="false" MasterPageFile="~/MasterPages/Standard.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="false" Inherits="Reference" ValidateRequest="false" MasterPageFile="~/MasterPages/Standard.master" Codebehind="Reference.aspx.cs" %>
 <%@ Register TagPrefix="RS" TagName="ReferenceTable" Src="~/UserControls/ReferenceTable.ascx" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="H">

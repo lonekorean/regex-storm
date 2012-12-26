@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="false" CodeFile="ReferenceTable.ascx.cs" Inherits="UserControls.ReferenceTable" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" Inherits="UserControls.ReferenceTable" Codebehind="ReferenceTable.ascx.cs" %>
 
 <asp:DataList ID="dlRefTable" runat="server" ExtractTemplateRows="true" CssClass="ref_table">
     <HeaderTemplate>
