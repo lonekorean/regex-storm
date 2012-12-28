@@ -14,7 +14,7 @@
             <div class="updates_title">What's New?</div>
             <ul>
                 <li>
-                    <div class="update_item_title">December 18, 2012</div>
+                    <div class="update_item_title">December 27, 2012</div>
                     <div class="update_item_blurb">
                         Switched hosts, upgraded to .NET 4.0, and cleaned up some code.
                     </div>

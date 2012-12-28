@@ -27,8 +27,8 @@
         UriBuilder redirectUrl = new UriBuilder(Request.Url);
         
         // remove www and change .com to .net (if necessary)
-        redirectUrl.Host = Regex.Replace(redirectUrl.Host, "^www.", "");
-        redirectUrl.Host = Regex.Replace(redirectUrl.Host, "\\.com$", ".net");
+        //redirectUrl.Host = Regex.Replace(redirectUrl.Host, "^www.", "");
+        //redirectUrl.Host = Regex.Replace(redirectUrl.Host, "\\.com$", ".net");
 
         // if anything on the redirect url was changed, then a redirect is due
         if (redirectUrl.Uri.ToString() != Request.Url.ToString())

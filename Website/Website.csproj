@@ -125,7 +125,9 @@
     <Content Include="Stylesheets\TesterFixes\safari-all.css" />
     <Content Include="Tester.aspx" />
     <Content Include="UserControls\ReferenceTable.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
