@@ -61,7 +61,7 @@
                             <asp:CheckBox ID="cbMultiline" runat="server" />
                             <asp:Label runat="server" AssociatedControlID="cbMultiline">Multiline</asp:Label>
                         </div>
-                        <div class="check_options_block">
+                        <div class="check_options_block right_to_left">
                             <asp:CheckBox ID="cbRightToLeft" runat="server" />
                             <asp:Label runat="server" AssociatedControlID="cbRightToLeft">Right To Left</asp:Label>
                         </div>

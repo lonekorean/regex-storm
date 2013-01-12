@@ -18,10 +18,10 @@ public partial class Tester : PageBase
 {
     #region Constants
 
-    private const int MAX_INPUT_LENGTH = 10000;
-    private const int MAX_MATCHES = 100;
-    private const int MAX_GROUPS = 50;
-    private const int MAX_CAPTURES = 20;
+    private const int MAX_INPUT_LENGTH = 1000000;
+    private const int MAX_MATCHES = 1000;
+    private const int MAX_GROUPS = 500;
+    private const int MAX_CAPTURES = 200;
     private const int MAX_PERMALINK_LENGTH = 1024;
     private const string MATCH_HIGHLIGHT_LEFT_MARKER = "(--##REGEXSTORM:LEFT##--)";
     private const string MATCH_HIGHLIGHT_RIGHT_MARKER = "(--##REGEXSTORM:RIGHT##--)";

@@ -4,6 +4,7 @@ var isAsyncUpdateTimerOn = false;       // flag to denote when the timer is acti
 var cachedDetailsLinks = new Array();   // contains details links that have already been retrieved
 var blockDetailsTabAsync = false;       // used to block duplicate async calls to prevent "tab purgatory"
 var enableHaystackBackdrop = true;      // true by default
+var showRightToLeftWarning = true;      // to remind people to change starting char position
 
 // commonly referenced elements
 var patternInput;
@@ -165,6 +166,13 @@ $(document).ready(function(){
         }
         
         return false;
+    });
+
+    $('.right_to_left > *').click(function () {
+        if (showRightToLeftWarning) {
+            alert('Don\'t forget to update the starting character position if you want to search right to left.');
+            showRightToLeftWarning = false;
+        }
     });
     
     // setup captures (duh)
