@@ -14,15 +14,15 @@
             <div class="updates_title">What's New?</div>
             <ul>
                 <li>
-                    <div class="update_item_title">December 27, 2012</div>
+                    <div class="update_item_title">January 12, 2013</div>
                     <div class="update_item_blurb">
-                        Switched hosts, upgraded to .NET 4.0, and cleaned up some code.
+                        Added support for longer input with more matches. Also, several new bug fixes.
                     </div>
                 </li>
                 <li>
-                    <div class="update_item_title">August 14, 2010</div>
+                    <div class="update_item_title">December 27, 2012</div>
                     <div class="update_item_blurb">
-                        Made some minor updates around the site to keep everything running smoothly.
+                        Switched hosts, upgraded to .NET 4.0, and cleaned up some code.
                     </div>
                 </li>
             </ul>
