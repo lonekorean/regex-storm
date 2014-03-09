@@ -14,15 +14,9 @@
             <div class="updates_title">What's New?</div>
             <ul>
                 <li>
-                    <div class="update_item_title">January 12, 2013</div>
+                    <div class="update_item_title">March 9, 2014</div>
                     <div class="update_item_blurb">
-                        Added support for longer input with more matches. Also, several new bug fixes.
-                    </div>
-                </li>
-                <li>
-                    <div class="update_item_title">December 27, 2012</div>
-                    <div class="update_item_blurb">
-                        Switched hosts, upgraded to .NET 4.0, and cleaned up some code.
+                        Regex Storm is now open source. You can grab all code and assets from the <a href="https://github.com/lonekorean/regex-storm" target="_blank">Regex Storm GitHub Repo</a>.
                     </div>
                 </li>
             </ul>
