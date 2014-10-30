@@ -151,6 +151,7 @@ pre
 {
 	border-radius: 3px;
 	font-style: normal;
+	font-family: Courier New, Monospace;
 
 	/* these 2 styles fix a bug in IE8 where a wrapped span's
 	   background randomly dissappears on hover (yeah, WTF?) */
@@ -452,7 +453,7 @@ pre
 	padding: 6px 6px 6px 26px;
 	color: #666666;
 	width: 820px;
-	font-family: Courier New, Monospace;	
+	font-family: Courier New, Monospace;
 	background-color: #ffffff;
 }
 
