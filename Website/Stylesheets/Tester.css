@@ -1,4 +1,6 @@
-﻿.form_section
+﻿@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+.form_section
 {
 	padding: 10px 0px;
 	overflow: auto;
@@ -51,6 +53,16 @@
 	line-height: 140%;
 }
 
+.text_area_input,
+.haystack_backdrop_wrap_powered div,
+.haystack_backdrop_wrap em,
+.details_context
+{
+	font-family: 'Droid Sans Mono', monospace;
+	font-size: 14px;
+	line-height: 20px;
+}
+
 .text_area_input
 {
 	float: left;
@@ -60,9 +72,6 @@
 	padding: 6px;
 	margin: 0px;
 	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
-	font-size: 14px;
-	font-family: Courier New, Monospace;
-	line-height: 18px;
 	resize: none;
 	letter-spacing: 1px;
 	overflow-x: hidden;
@@ -71,19 +80,19 @@
 
 .pattern_input
 {
-	height: 42px;
+	height: 40px;
 }
 
 .replacement_input
 {
-	height: 42px;
+	height: 40px;
 }
 
 .haystack_backdrop_wrap
 {
 	float: left;
 	width: 590px;
-	height: 164px;
+	height: 214px;
 }
 
 /* this style is added to the haystack backdrop wrap
@@ -104,13 +113,10 @@
 {
 	display: block;
 	color: #f7f7f7;
-	line-height: 18px;
 	letter-spacing: 1px;
 	width: 588px;
-	height: 162px;
+	height: 212px;
 	margin: 1px;
-	font-size: 14px;
-	font-family: Courier New, Monospace;
 	position: absolute;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -119,6 +125,7 @@
 .haystack_backdrop_wrap pre
 {
 	padding: 6px;
+    font-family: inherit;
 }
 
 .haystack_backdrop_button
@@ -128,7 +135,7 @@
 
 .haystack_input
 {
-	height: 150px;
+	height: 200px;
 }
 
 .haystack_backdrop_wrap_powered .haystack_input
@@ -151,7 +158,6 @@ pre
 {
 	border-radius: 3px;
 	font-style: normal;
-	font-family: Courier New, Monospace;
 
 	/* these 2 styles fix a bug in IE8 where a wrapped span's
 	   background randomly dissappears on hover (yeah, WTF?) */
@@ -275,13 +281,13 @@ pre
 {
 	float: right;
 	border-radius: 5px;
-	width: 34px;
+	width: 40px;
 	padding: 1px;
 	margin: 0px;
 	border: solid 1px #cccccc;
 	background-color: #ffffff;
 	font-size: 14px;
-	font-family: Courier New, Monospace;
+	font-family: 'Droid Sans Mono', monospace;
 	text-align: right;
 }
 
@@ -453,7 +459,7 @@ pre
 	padding: 6px 6px 6px 26px;
 	color: #666666;
 	width: 820px;
-	font-family: Courier New, Monospace;
+	font-family: 'Droid Sans Mono', monospace;
 	background-color: #ffffff;
 }
 
@@ -566,9 +572,10 @@ a.captures_count
 
 .details_context
 {
-	font-size: 14px;
-	line-height: 20px;
-	font-family: Courier New;
+}
+
+.details_context pre {
+    font-family: inherit;
 }
 
 .details_context_no_script
