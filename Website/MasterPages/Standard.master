@@ -32,7 +32,6 @@
                         <li><asp:HyperLink ID="hlNavTester" runat="server" NavigateUrl="~/tester">Tester</asp:HyperLink></li>
                         <li><asp:HyperLink ID="hlNavReference" runat="server" NavigateUrl="~/reference">Reference</asp:HyperLink></li>
                         <li><asp:HyperLink ID="hlNavAbout" runat="server" NavigateUrl="~/about">About</asp:HyperLink></li>
-                        <li><a href="http://regexstorm.blogspot.com/" target="_blank">Blog</a></li>
                     </ul>
                 </div>
             </div>

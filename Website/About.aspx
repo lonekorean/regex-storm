@@ -20,9 +20,6 @@
             while also keeping the interface clean and easy to use.
         </p>
         <p>
-            To find out more or just see what's new, check out the <a href="http://regexstorm.blogspot.com/" target="_blank">Regex Storm Dev Blog</a>.
-        </p>
-        <p>
             Key features:
         </p>
         <ul>

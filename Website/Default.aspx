@@ -14,9 +14,9 @@
             <div class="updates_title">What's New?</div>
             <ul>
                 <li>
-                    <div class="update_item_title">March 9, 2014</div>
+                    <div class="update_item_title">October 20, 2016</div>
                     <div class="update_item_blurb">
-                        Regex Storm is now open source. You can grab all code and assets from the <a href="https://github.com/lonekorean/regex-storm" target="_blank">Regex Storm GitHub Repo</a>.
+                        Fixed some text and highlight alignment issues. Regex Storm is still open source. Check out the <a href="https://github.com/lonekorean/regex-storm" target="_blank">GitHub Repo</a>!
                     </div>
                 </li>
             </ul>
@@ -40,10 +40,6 @@
         <div class="front_jump_block front_jump_about">
             <asp:HyperLink runat="server" NavigateUrl="~/about" CssClass="front_jump_link">About</asp:HyperLink>
             <div class="front_jump_blurb">The purpose behind Regex Storm, key features, credits, all that good stuff.</div>
-        </div>
-        <div class="front_jump_block front_jump_blog">
-            <asp:HyperLink runat="server" NavigateUrl="http://regexstorm.blogspot.com/" Target="_blank" CssClass="front_jump_link">Dev Blog</asp:HyperLink>
-            <div class="front_jump_blurb">Take a look at what's going on behind the scenes at Regex Storm.</div>
         </div>
     </div>
 
