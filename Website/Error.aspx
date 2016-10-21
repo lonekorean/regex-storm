@@ -16,7 +16,7 @@
         </p>
         <p>
             Actually, it's probably not so bad. But if you could kindly send me any info about what happened, then
-            I can do my best to fix it for you. Just send an email to will at regexstorm dot net. Thanks!
+            I can do my best to fix it for you. Just send an email to <span>will</span><span>@</span><span>coders</span><span class="spam-trick">-spam-misdirect-</span><span>block</span><span>.</span><span>com</span>. Thanks!
         </p>
     </div>
 

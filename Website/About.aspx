@@ -32,14 +32,17 @@
         </ul>
         <br />
         <p>
-            <strong>Tell me stuff!</strong>
+            <strong>More stuff!</strong>
+        </p>
+        <p>
+            Regex Storm is open source. You can find all source code and assets in the <a href="https://github.com/lonekorean/regex-storm" target="_blank">GitHub repo</a>.
         </p>
         <p>
             If you have any comments or suggestions, I want to hear them. Please send me an email at
             <span>will</span><span>@</span><span>coders</span><span class="spam-trick">-spam-misdirect-</span><span>block</span><span>.</span><span>com</span>.
         </p>
         <p>
-            For more information about me, or to see my other projects, please visit <a href="http://codersblock.com/" target="_blank">Coder's Block</a>.
+            Check out more of my stuff at <a href="http://codersblock.com/" target="_blank">Coder's Block</a>.
         </p>
         <br />
         <p>
