@@ -14,6 +14,12 @@ using System.Xml.Linq;
 public class PageBase : System.Web.UI.Page
 {
 
+    #region Constants
+
+    private const string CACHE_KEY = "10-20-2016";
+
+    #endregion
+
     #region Variables
 
     private List<Control> viewStateControls = new List<Control>();
@@ -130,7 +136,7 @@ public class PageBase : System.Web.UI.Page
             foreach (string href in stylesheetHrefs)
             {
                 HtmlLink stylesheetRef = new HtmlLink();
-                stylesheetRef.Href = ResolveUrl(href);
+                stylesheetRef.Href = ResolveUrl(href) + (!href.StartsWith("http") ? "?v=" + CACHE_KEY : "");
                 stylesheetRef.Attributes.Add("rel", "stylesheet");
                 stylesheetRef.Attributes.Add("type", "text/css");
                 phHeaderStuff.Controls.Add(stylesheetRef);
@@ -141,7 +147,7 @@ public class PageBase : System.Web.UI.Page
             foreach (string src in javascriptSrcs)
             {
                 HtmlGenericControl javascriptRef = new HtmlGenericControl("script");
-                javascriptRef.Attributes.Add("src", ResolveUrl(src));
+                javascriptRef.Attributes.Add("src", ResolveUrl(src) + (!src.StartsWith("http") ? "?v=" + CACHE_KEY : ""));
                 javascriptRef.Attributes.Add("type", "text/javascript");
                 phHeaderStuff.Controls.Add(javascriptRef);
                 phHeaderStuff.Controls.Add(new LiteralControl("\n"));
