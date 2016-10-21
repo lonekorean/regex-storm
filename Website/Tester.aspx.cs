@@ -448,6 +448,11 @@ public partial class Tester : PageBase
                         cvPatternParsing.IsValid = false;
                     }
                 }
+                catch (Exception)
+                {
+                    cvPatternParsing.ErrorMessage = "Unable to parse pattern";
+                    cvPatternParsing.IsValid = false;
+                }
 
                 if (Page.IsValid)
                 {
@@ -695,6 +700,13 @@ public partial class Tester : PageBase
         }
     }
 
+    private string UrlEncode(string raw)
+    {
+        // also encodes parenthesis because of user feedback that links containing
+        // them break in Outlook and OpenOffice
+        return HttpUtility.UrlEncode(raw).Replace("(", "%28").Replace(")", "%29");
+    }
+
     private string GetStateUrl()
     {
         StringBuilder queryString = new StringBuilder();
@@ -702,19 +714,19 @@ public partial class Tester : PageBase
         // pattern
         if (!string.IsNullOrEmpty(txtPattern.Text))
         {
-            queryString.Append("&p=" + HttpUtility.UrlEncode(txtPattern.Text));
+            queryString.Append("&p=" + UrlEncode(txtPattern.Text));
         }
 
         // haystack
         if (!string.IsNullOrEmpty(txtHaystack.Text))
         {
-            queryString.Append("&i=" + HttpUtility.UrlEncode(txtHaystack.Text));
+            queryString.Append("&i=" + UrlEncode(txtHaystack.Text));
         }
 
         // replacement (determined by checkbox)
         if (cbReplacement.Checked)
         {
-            queryString.Append("&r=" + HttpUtility.UrlEncode(txtReplacement.Text));
+            queryString.Append("&r=" + UrlEncode(txtReplacement.Text));
         }
 
         // regex options
@@ -729,19 +741,19 @@ public partial class Tester : PageBase
         if (cbEcmaScript.Checked) { regexOptionsCode.Append("e"); }
         if (regexOptionsCode.Length > 0)
         {
-            queryString.Append("&o=" + HttpUtility.UrlEncode(regexOptionsCode.ToString()));
+            queryString.Append("&o=" + UrlEncode(regexOptionsCode.ToString()));
         }
 
         // start position
         if (startPosition != 0)
         {
-            queryString.Append("&s=" + HttpUtility.UrlEncode(txtStartPosition.Text));
+            queryString.Append("&s=" + UrlEncode(txtStartPosition.Text));
         }
 
         // matches limit
         if (matchesLimit != MAX_MATCHES)
         {
-            queryString.Append("&l=" + HttpUtility.UrlEncode(txtMatchesLimit.Text));
+            queryString.Append("&l=" + UrlEncode(txtMatchesLimit.Text));
         }
 
         // create a new url with current scheme and host
