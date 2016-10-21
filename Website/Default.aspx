@@ -16,7 +16,7 @@
                 <li>
                     <div class="update_item_title">October 20, 2016</div>
                     <div class="update_item_blurb">
-                        Fixed some text and highlight alignment issues. Regex Storm is still open source. Check out the <a href="https://github.com/lonekorean/regex-storm" target="_blank">GitHub Repo</a>!
+                        Lots of bug fixes and maintenance. Regex Storm is still open source. Check out the <a href="https://github.com/lonekorean/regex-storm" target="_blank">GitHub Repo</a>!
                     </div>
                 </li>
             </ul>
