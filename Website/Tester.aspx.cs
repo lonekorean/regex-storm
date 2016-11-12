@@ -26,6 +26,7 @@ public partial class Tester : PageBase
     private const string MATCH_HIGHLIGHT_LEFT_MARKER = "(--##REGEXSTORM:LEFT##--)";
     private const string MATCH_HIGHLIGHT_RIGHT_MARKER = "(--##REGEXSTORM:RIGHT##--)";
     private const string EMPTY_START_MESSAGE = "Enter your <strong>pattern</strong> and <strong>input</strong> above to see the good stuff here.";
+    private const int MAX_URL_LENGTH = 2000;
 
     #endregion
 
@@ -763,10 +764,20 @@ public partial class Tester : PageBase
         url.Path = this.RawPath;
 
         // set new query string
-        url.Query = queryString.ToString().TrimStart('&');
-
-        // return the full absolute url
-        return url.Uri.AbsoluteUri;
+        var finalQueryString = queryString.ToString().TrimStart('&');
+        var maxQueryStringLength = MAX_URL_LENGTH - url.Uri.AbsoluteUri.Length - 1; // -1 for the ?
+        if (finalQueryString.Length > maxQueryStringLength)
+        {
+            // crazy long query strings aren't handled well by browsers and can
+            // even cause exceptions with UriBuilder, so don't use them
+            return "(permalink is too long to generate)";
+        }
+        else
+        {
+            // return the full absolute url
+            url.Query = finalQueryString;
+            return url.Uri.AbsoluteUri;
+        }
     }
 
     private string MatchHighlightNoReplacements(Match m)
