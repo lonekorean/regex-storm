@@ -10,7 +10,7 @@
 .left_form_column
 {
 	float: left;
-	width: 590px;
+	width: 710px;
 	padding-left: 30px;
 	overflow: auto;
 }
@@ -18,7 +18,7 @@
 .right_form_column
 {
 	float: left;
-	width: 286px;
+	width: 166px;
 	margin: 0px 30px 0px 20px;
 	overflow: auto;
 }
@@ -27,7 +27,6 @@
 {
 	float: left;
 	color: #464646;
-	font-size: 14px;
 	font-weight: bold;
 	padding-bottom: 2px;
 	overflow: auto;
@@ -46,7 +45,7 @@
 .replacement_tip
 {
 	display: none;
-	background: url(../Images/Icons/storm.png) no-repeat;
+	background: url(../Images/Icons/storm.png) no-repeat 0 1px;
 	float: left;
 	color: #464646;
 	padding: 0px 0px 0px 20px;
@@ -66,9 +65,10 @@
 .text_area_input
 {
 	float: left;
+    clear: left;
 	border: solid 1px #cccccc;
 	border-radius: 5px;
-	width: 576px;
+	width: 696px;
 	padding: 6px;
 	margin: 0px;
 	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
@@ -78,20 +78,17 @@
 	overflow-y: scroll;
 }
 
-.pattern_input
-{
-	height: 40px;
-}
-
+.pattern_input,
 .replacement_input
 {
-	height: 40px;
+	height: 71px;
 }
 
 .haystack_backdrop_wrap
 {
 	float: left;
-	width: 590px;
+    clear: left;
+	width: 710px;
 	height: 214px;
 }
 
@@ -114,7 +111,7 @@
 	display: block;
 	color: #f7f7f7;
 	letter-spacing: 1px;
-	width: 588px;
+	width: 708px;
 	height: 212px;
 	margin: 1px;
 	position: absolute;
@@ -199,7 +196,7 @@ pre
 {
 	display: block;
 	float: left;
-	padding: 4px 0px 0px 2px;
+	padding: 3px 0px 0px 2px;
 }
 
 .options_wrap
@@ -221,20 +218,6 @@ pre
 	margin-bottom: 6px;
 }
 
-.check_options_left
-{
-	float: left;
-	overflow: auto;
-	width: 152px;
-}
-
-.check_options_right
-{
-	float: left;
-	overflow: auto;
-	width: 112px;
-}
-
 .check_options_block
 {
 	clear: both;
@@ -253,7 +236,7 @@ pre
 {
 	display: block;
 	float: left;
-	padding: 4px 0px 0px 2px;
+	padding: 3px 0px 0px 2px;
 }
 
 .numerical_options
@@ -267,7 +250,6 @@ pre
 	clear: both;
 	overflow: auto;
 	padding-top: 4px;
-	padding-left: 4px;
 }
 
 .numerical_option_block label
@@ -279,11 +261,12 @@ pre
 
 .numerical_option_block input
 {
-	float: right;
+    box-sizing: border-box;
+    float: right;
+    width: 50%;
 	border-radius: 5px;
-	width: 40px;
-	padding: 1px;
-	margin: 0px;
+	padding: 2px;
+	margin: 2px 0 0;
 	border: solid 1px #cccccc;
 	background-color: #ffffff;
 	font-size: 14px;
@@ -312,9 +295,6 @@ pre
 
 .submit_section
 {
-	float: left;
-	width: 590px;
-	text-align: right;
 	padding: 10px 30px;
 }
 
@@ -348,10 +328,9 @@ pre
 .details_tabs a
 {
 	display: block;
-	font-weight: bold;
 	padding: 4px 16px 4px 38px;
 	background-repeat: no-repeat;
-	background-position: 16px 3px;
+	background-position: 16px 4px;
 }
 
 .details_info_link
@@ -424,7 +403,7 @@ pre
 .regex_info_blurb
 {
 	display: block;
-	background: url(../Images/Icons/info.png) no-repeat;
+	background: url(../Images/Icons/info.png) no-repeat 0 1px;
 	background-color: #f7f7f7; /* fixes IE ugly png fading */
 	padding: 1px 0px 1px 20px;
 }
@@ -454,13 +433,13 @@ pre
 .permalink_input
 {
 	border: dotted 1px #cccccc;
-	font-size: 12px;
-	background: url(../Images/Icons/permalink.png) no-repeat 6px 6px;
+	background: url(../Images/Icons/permalink.png) no-repeat 6px 7px;
 	padding: 6px 6px 6px 26px;
 	color: #666666;
 	width: 820px;
 	font-family: 'Droid Sans Mono', monospace;
 	background-color: #ffffff;
+    font-size: 14px;
 }
 
 .details_table_wrap
