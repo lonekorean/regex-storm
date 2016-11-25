@@ -71,8 +71,7 @@
 	text-align: left;
 	font-weight: bold;
 	color: #464646;
-	font-size: 14px;
-	padding: 8px 0px 4px 0px;
+	padding: 16px 0px 4px 0px;
 	border-bottom: solid 1px #cccccc;
 }
 
@@ -120,7 +119,7 @@
 {
 	display: none;
 	font-weight: bold;
-	background: url(../Images/Icons/error.png) no-repeat;
+	background: url(../Images/Icons/error.png) no-repeat 0 1px;
 	padding: 1px 0px 1px 20px;
 	color: #e54f3e;
 	margin-top: 30px;

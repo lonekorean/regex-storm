@@ -11,7 +11,7 @@ body
 	min-width: 1000px;
 	margin: 0px;
 	font-family: Arial, Sans-Serif;
-	font-size: 12px;
+	font-size: 14px;
 	color: #333333;
 	background-color: #e2e2e2;
 	background-image: url(../Images/body_back.gif);
@@ -80,7 +80,6 @@ a:hover
 {
 	display: block;
 	float: left;
-	font-weight: bold;
 	background: url(../Images/nav_divider.gif) no-repeat right center;
 	height: 16px;
 	padding: 10px 30px;
@@ -187,7 +186,6 @@ a:hover
 
 .footer_block_title
 {
-	font-size: 14px;
 	letter-spacing: 2px;
 	color: #cccccc;
 	text-transform: uppercase;
@@ -240,13 +238,12 @@ a:hover
 	background-color: #464646;
 }
 
-.footer_coders_block_link
+.footer_external_link
 {
     color: #c1e044;
-    font-weight: bold;
 }
 
-.footer_coders_block_link:hover
+.footer_external_link:hover
 {
     text-decoration: none;
 }
@@ -271,7 +268,7 @@ a:hover
 
 .section_text
 {
-	padding: 0px 30px;
+	padding: 0px 230px 0px 30px;
 	overflow: auto;
 	line-height: 150%;
 }

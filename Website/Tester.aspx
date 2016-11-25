@@ -34,50 +34,46 @@
             <div class="label">Options</div>
             <div class="options_wrap">
                 <div class="check_options">
-                    <div class="check_options_left">
-                        <div class="check_options_block">
-                            <asp:CheckBox ID="cbIgnoreCase" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbIgnoreCase">Ignore Case</asp:Label>
-                        </div>
-                        <div class="check_options_block">
-                            <asp:CheckBox ID="cbIgnorePatternWhitespace" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbIgnorePatternWhitespace">Ignore Whitespace</asp:Label>
-                        </div>
-                        <div class="check_options_block">
-                            <asp:CheckBox ID="cbExplicitCapture" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbExplicitCapture">Explicit Capture</asp:Label>
-                        </div>
-                        <div class="check_options_block">
-                            <asp:CheckBox ID="cbCultureInvariant" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbCultureInvariant">Culture Invariant</asp:Label>
-                        </div>
+                    <div class="check_options_block">
+                        <asp:CheckBox ID="cbIgnoreCase" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbIgnoreCase">Ignore Case</asp:Label>
                     </div>
-                    <div class="check_options_right">
-                        <div class="check_options_block">
-                            <asp:CheckBox ID="cbSingleline" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbSingleline">Singleline</asp:Label>
-                        </div>
-                        <div class="check_options_block">
-                            <asp:CheckBox ID="cbMultiline" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbMultiline">Multiline</asp:Label>
-                        </div>
-                        <div class="check_options_block right_to_left">
-                            <asp:CheckBox ID="cbRightToLeft" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbRightToLeft">Right To Left</asp:Label>
-                        </div>
-                        <div class="check_options_block">
-                            <asp:CheckBox ID="cbEcmaScript" runat="server" />
-                            <asp:Label runat="server" AssociatedControlID="cbEcmaScript">ECMA Script</asp:Label>
-                        </div>
+                    <div class="check_options_block">
+                        <asp:CheckBox ID="cbIgnorePatternWhitespace" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbIgnorePatternWhitespace">Ignore Whitespace</asp:Label>
+                    </div>
+                    <div class="check_options_block">
+                        <asp:CheckBox ID="cbExplicitCapture" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbExplicitCapture">Explicit Capture</asp:Label>
+                    </div>
+                    <div class="check_options_block">
+                        <asp:CheckBox ID="cbCultureInvariant" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbCultureInvariant">Culture Invariant</asp:Label>
+                    </div>
+                    <div class="check_options_block">
+                        <asp:CheckBox ID="cbSingleline" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbSingleline">Singleline</asp:Label>
+                    </div>
+                    <div class="check_options_block">
+                        <asp:CheckBox ID="cbMultiline" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbMultiline">Multiline</asp:Label>
+                    </div>
+                    <div class="check_options_block right_to_left">
+                        <asp:CheckBox ID="cbRightToLeft" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbRightToLeft">Right To Left</asp:Label>
+                    </div>
+                    <div class="check_options_block">
+                        <asp:CheckBox ID="cbEcmaScript" runat="server" />
+                        <asp:Label runat="server" AssociatedControlID="cbEcmaScript">ECMA Script</asp:Label>
                     </div>
                 </div>
                 <div class="numerical_options">
                     <div class="numerical_option_block">
-                        <asp:Label runat="server" AssociatedControlID="txtStartPosition">Start search at character position:</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="txtStartPosition">Start from position:</asp:Label>
                         <asp:TextBox ID="txtStartPosition" runat="server" />
                     </div>
                     <div class="numerical_option_block">
-                        <asp:Label runat="server" AssociatedControlID="txtMatchesLimit">Max number of matches to find:</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="txtMatchesLimit">Max matches to find:</asp:Label>
                         <asp:TextBox ID="txtMatchesLimit" runat="server" />
                     </div>
                 </div>
@@ -99,7 +95,7 @@
                 <asp:TextBox ID="txtReplacement" runat="server" TextMode="MultiLine" CssClass="text_area_input replacement_input" spellcheck="false" />
             </div>
             <div class="right_form_column">
-                <div class="replacement_tip"><strong>Tip:</strong> Click the <strong>table</strong> or <strong>context</strong> tab to see your replacement results.</div>
+                <div class="replacement_tip">Click the <strong>context</strong> tab to see replacements.</div>
             </div>
         </div>
     </div>

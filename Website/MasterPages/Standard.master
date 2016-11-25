@@ -62,16 +62,16 @@
                     <div class="footer_block_title">Info</div>
                     <div class="footer_block_body">
                         <asp:Image runat="server" ImageUrl="~/Images/Icons/Large/info.png" AlternateText="Info" CssClass="footer_block_image" />
-                        <strong>Regex Storm</strong> &copy; 2010 - <asp:Literal ID="litYear" runat="server" /> Will Boyd<br />
-                        Part of the <a class="footer_coders_block_link" href="http://codersblock.com/" target="_blank">Coder's Block</a> portfolio
+                        Regex Storm &copy; 2010 - <asp:Literal ID="litYear" runat="server" /> Will Boyd<br />
+                        Part of the <a class="footer_external_link" href="http://codersblock.com/" target="_blank">Coder's Block</a> portfolio
                     </div>
                 </div>
                 <div class="footer_block">
                     <div class="footer_block_title">Contact</div>
                     <div class="footer_block_body">
                         <asp:Image runat="server" ImageUrl="~/Images/Icons/Large/contact.png" AlternateText="Contact" CssClass="footer_block_image" />
-                        Comments or suggestions?<br />
-                        <strong><span>will</span><span>@</span><span>coders</span><span class="spam-trick">-spam-misdirect-</span><span>block</span><span>.</span><span>com</span></strong>
+                        Twitter: <a class="footer_external_link" href="https://twitter.com/lonekorean" target="_blank">@lonekorean</a><br />
+                        Email: <span>will</span><span>@</span><span>coders</span><span class="spam-trick">-spam-misdirect-</span><span>block</span><span>.</span><span>com</span>
                     </div>
                 </div>
                 <div class="footer_block">
@@ -83,7 +83,6 @@
                             <asp:HyperLink ID="hlFooterTester" runat="server" NavigateUrl="~/tester">Tester</asp:HyperLink>
                             <asp:HyperLink ID="hlFooterReference" runat="server" NavigateUrl="~/reference">Reference</asp:HyperLink>
                             <asp:HyperLink ID="hlFooterAbout" runat="server" NavigateUrl="~/about">About</asp:HyperLink>
-                            <a href="http://regexstorm.blogspot.com/" target="_blank">Blog</a>
                         </div>
                     </div>
                 </div>

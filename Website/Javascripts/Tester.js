@@ -431,7 +431,7 @@ function setupPermalink()
     });
 
     // auto select all text when permalink box is clicked
-    $('.permalink_input').focus(function(){
+    $('.permalink_input').click(function(){
         $(this).select();
     });
 }
