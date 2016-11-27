@@ -22,8 +22,8 @@
 	height: 17px;
 	padding: 4px 0px;
 	margin: 0px;
-	border-top: solid 1px #cccccc;
-	border-bottom: solid 1px #cccccc;
+	border-top: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
 	border-left-style: none;
 	border-right-style: none;
 	background-color: #f7f7f7;
@@ -37,7 +37,7 @@
 	font-size: 12px;
 	font-family: Arial, Sans-Serif;
 	font-style: italic;
-	color: #999999;
+	color: #999;
 }
 
 .element_search_button_wrap
@@ -72,21 +72,21 @@
 	font-weight: bold;
 	color: #464646;
 	padding: 16px 0px 4px 0px;
-	border-bottom: solid 1px #cccccc;
+	border-bottom: solid 1px #ccc;
 }
 
 .ref_table td
 {
 	position: relative; /* fixes IE cell display isses */
 	vertical-align: top;
-	border-bottom: solid 1px #cccccc;
+	border-bottom: solid 1px #ccc;
 }
 
 .ref_table td em
 {
 	font-weight: normal;
 	background-color: #f2f2f2;
-	border: dashed 1px #cccccc;
+	border: dashed 1px #ccc;
 	padding: 1px;
 }
 

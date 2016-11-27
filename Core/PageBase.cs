@@ -16,7 +16,7 @@ public class PageBase : System.Web.UI.Page
 
     #region Constants
 
-    private const string CACHE_KEY = "10-20-2016";
+    private const string CACHE_KEY = "11-27-2016";
 
     #endregion
 
@@ -33,7 +33,7 @@ public class PageBase : System.Web.UI.Page
 
     public bool IsDevEnvironment
     {
-        get { return (Request.Url.Host == "dev.regexstorm.net"); }
+        get { return HttpContext.Current.Request.IsLocal; }
     }
 
     public string RawPath
@@ -72,7 +72,7 @@ public class PageBase : System.Web.UI.Page
         AddStylesheet("~/Stylesheets/Base.css");
         AddJavascript("http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js");
 
-        // sessoin flag for excluding stats (so I can view the site in prod without google analytics)
+        // session flag for excluding stats (so I can view the site in prod without google analytics)
         string excludeStats = Request.QueryString["excludestats"] ?? "";
         if (excludeStats == "true" || IsDevEnvironment)
         {

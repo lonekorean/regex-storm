@@ -11,8 +11,8 @@
 	float: right;
 	width: 244px;
 	padding: 20px 20px 0px 20px;
-	background-color: #ffffff;
-	border: solid 1px #cccccc;
+	background-color: #fff;
+	border: solid 1px #ccc;
 	margin-left: 20px;
 }
 
@@ -20,7 +20,7 @@
 {
 	font-weight: bold;
 	padding-bottom: 10px;
-	border-bottom: dotted 1px #cccccc;
+	border-bottom: dotted 1px #ccc;
 	margin-bottom: 10px;
 }
 
@@ -46,7 +46,7 @@
 
 .update_item_blurb
 {
-	color: #666666;
+	color: #666;
 	line-height: 140%;
 }
 

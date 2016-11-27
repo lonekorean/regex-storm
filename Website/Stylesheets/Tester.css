@@ -66,7 +66,7 @@
 {
 	float: left;
     clear: left;
-	border: solid 1px #cccccc;
+	border: solid 1px #ccc;
 	border-radius: 5px;
 	width: 696px;
 	padding: 6px;
@@ -205,7 +205,7 @@ pre
 	overflow: auto;
 	padding: 10px;
 	border-radius: 5px;
-	border: solid 1px #cccccc;
+	border: solid 1px #ccc;
 	background: #f7f7f7 url(../Images/input_fade.png) repeat-x;
 }
 
@@ -214,7 +214,7 @@ pre
 	clear: both;
 	overflow: auto;
 	padding-bottom: 8px;
-	border-bottom: dotted 1px #cccccc;
+	border-bottom: dotted 1px #ccc;
 	margin-bottom: 6px;
 }
 
@@ -267,8 +267,8 @@ pre
 	border-radius: 5px;
 	padding: 2px;
 	margin: 2px 0 0;
-	border: solid 1px #cccccc;
-	background-color: #ffffff;
+	border: solid 1px #ccc;
+	background-color: #fff;
 	font-size: 14px;
 	font-family: 'Droid Sans Mono', monospace;
 	text-align: right;
@@ -312,10 +312,10 @@ pre
 {
 	float: left;
 	margin-right: 4px;
-	border: solid 1px #cccccc;
+	border: solid 1px #ccc;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
-	background: #eeeeee url(../Images/detail_tab_back.png) repeat-x;
+	background: #eee url(../Images/detail_tab_back.png) repeat-x;
 }
 
 .details_tabs li.details_tab_active
@@ -356,7 +356,7 @@ pre
 .details_content
 {
 	overflow: auto;
-	border: solid 1px #cccccc;
+	border: solid 1px #ccc;
 	border-top: none;
 	padding: 10px 20px;
 	margin: 0px 30px;
@@ -367,7 +367,7 @@ pre
 .details_content_no_script
 {
 	margin-top: 20px;
-	border-top: solid 1px #cccccc;
+	border-top: solid 1px #ccc;
 }
 
 .details_section
@@ -396,7 +396,7 @@ pre
 .split_list li span.non-lit,
 .captures ol li span.non-lit
 {
-	color: #999999;
+	color: #999;
 	font-style: italic;
 }
 
@@ -432,13 +432,13 @@ pre
 
 .permalink_input
 {
-	border: dotted 1px #cccccc;
+	border: dotted 1px #ccc;
 	background: url(../Images/Icons/permalink.png) no-repeat 6px 7px;
 	padding: 6px 6px 6px 26px;
-	color: #666666;
+	color: #666;
 	width: 820px;
 	font-family: 'Droid Sans Mono', monospace;
-	background-color: #ffffff;
+	background-color: #fff;
     font-size: 14px;
 }
 
@@ -446,7 +446,7 @@ pre
 {
 	float: left;
 	width: 852px;
-	border: solid 1px #cccccc;
+	border: solid 1px #ccc;
 	overflow: auto;
 }
 
@@ -459,13 +459,13 @@ pre
 .details_table_header_row
 {
 	text-align: left;
-	background-color: #999999;
+	background-color: #999;
 	background: url(../Images/table_header_back.gif) repeat-x;
 }
 
 .details_table tr.odd
 {
-	background-color: #ffffff;
+	background-color: #fff;
 }
 
 .details_table tr.even
@@ -476,7 +476,7 @@ pre
 .details_table th
 {
 	padding: 6px;
-	border-left: solid 1px #cccccc;
+	border-left: solid 1px #ccc;
 	text-align: left;
 	white-space: nowrap;
 }
@@ -484,8 +484,8 @@ pre
 .details_table td
 {
 	padding: 6px;
-	border-left: solid 1px #cccccc;
-	border-top: solid 1px #cccccc;
+	border-left: solid 1px #ccc;
+	border-top: solid 1px #ccc;
 	vertical-align: top;
 	line-height: 140%;
 }
@@ -504,7 +504,7 @@ pre
 
 span.captures_count
 {
-	color: #999999;
+	color: #999;
 	margin-top: 2px;
 	white-space: nowrap;
 }
@@ -514,7 +514,7 @@ a.captures_count
 	display: block;
 	background-image: url(../Images/Icons/bullet_toggle_plus.png);
 	background-repeat: no-repeat;
-	background-position: 1px 4px;
+	background-position: 1px 5px;
 	padding-left: 12px;
 	margin-top: 2px;
 	white-space: nowrap;
@@ -533,19 +533,19 @@ a.captures_count
 .captures ol li
 {
 	padding-top: 2px;
-	color: #999999;
+	color: #999;
 }
 
 .captures ol li span
 {
-	color: #333333;
+	color: #333;
 }
 
 .captures_remaining
 {
 	white-space: nowrap;
 	padding-top: 2px;
-	color: #999999;
+	color: #999;
 	font-style: italic;
 }
 
@@ -559,9 +559,9 @@ a.captures_count
 
 .details_context_no_script
 {
-	border: solid 1px #cccccc;
+	border: solid 1px #ccc;
 	padding: 10px;
-	background-color: #ffffff;
+	background-color: #fff;
 }
 
 .details_context em
@@ -587,8 +587,8 @@ a.captures_count
 {
 	margin: 0px;
 	padding: 6px 6px 6px 49px;
-	border: solid 1px #cccccc;
-	background-color: #ffffff;
+	border: solid 1px #ccc;
+	background-color: #fff;
 }
 
 .split_list li:first-child
@@ -599,11 +599,11 @@ a.captures_count
 .split_list li
 {
 	padding: 4px 0px;
-	color: #999999;
+	color: #999;
 	border-top: solid 1px #e2e2e2;
 }
 
 .split_list li span
 {
-	color: #333333;
+	color: #333;
 }
