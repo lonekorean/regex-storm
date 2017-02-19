@@ -14,9 +14,9 @@
             <div class="updates_title">What's New?</div>
             <ul>
                 <li>
-                    <div class="update_item_title">November 25, 2016</div>
+                    <div class="update_item_title">February 19, 2017</div>
                     <div class="update_item_blurb">
-                        Bug fixes, UI improvements. Regex Storm is still open source. Check out the <a href="https://github.com/lonekorean/regex-storm" target="_blank">GitHub Repo</a>!
+                        Moved to a new host. Regex Storm is still open source. Check out the <a href="https://github.com/lonekorean/regex-storm" target="_blank">GitHub Repo</a>!
                     </div>
                 </li>
             </ul>
