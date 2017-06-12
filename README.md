@@ -1,9 +1,8 @@
-regex-storm
-===========
+# regex-storm
 
 Regex Storm, online .NET-based regular expressions tester and resource.
 
-###About
+## About
 
 This is the codebase for the site running at http://regexstorm.net/.
 
